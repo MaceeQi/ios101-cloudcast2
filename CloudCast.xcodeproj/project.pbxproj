@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6491AFD72ACCF7BF00F4D047 /* WeatherForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6491AFD62ACCF7BF00F4D047 /* WeatherForecastService.swift */; };
 		997BF5EB29D4838D0099F2B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BF5EA29D4838D0099F2B4 /* AppDelegate.swift */; };
 		997BF5ED29D4838D0099F2B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BF5EC29D4838D0099F2B4 /* SceneDelegate.swift */; };
 		997BF5EF29D4838D0099F2B4 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BF5EE29D4838D0099F2B4 /* ForecastViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6491AFD62ACCF7BF00F4D047 /* WeatherForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastService.swift; sourceTree = "<group>"; };
 		997BF5E729D4838D0099F2B4 /* CloudCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		997BF5EA29D4838D0099F2B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		997BF5EC29D4838D0099F2B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +52,7 @@
 		997BF60729D4838E0099F2B4 /* CloudCastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudCastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		997BF60B29D4838E0099F2B4 /* CloudCastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCastUITests.swift; sourceTree = "<group>"; };
 		997BF60D29D4838E0099F2B4 /* CloudCastUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCastUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		99E9824829D7944B0084E9EB /* CurrentWeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherForecast.swift; sourceTree = "<group>"; };
+		99E9824829D7944B0084E9EB /* CurrentWeatherForecast.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = CurrentWeatherForecast.swift; sourceTree = "<group>"; tabWidth = 2; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				997BF5EA29D4838D0099F2B4 /* AppDelegate.swift */,
 				997BF5EC29D4838D0099F2B4 /* SceneDelegate.swift */,
 				997BF5EE29D4838D0099F2B4 /* ForecastViewController.swift */,
+				6491AFD62ACCF7BF00F4D047 /* WeatherForecastService.swift */,
 				99E9824829D7944B0084E9EB /* CurrentWeatherForecast.swift */,
 				997BF5F029D4838D0099F2B4 /* Main.storyboard */,
 				997BF5F329D4838E0099F2B4 /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			files = (
 				997BF5EF29D4838D0099F2B4 /* ForecastViewController.swift in Sources */,
 				997BF5EB29D4838D0099F2B4 /* AppDelegate.swift in Sources */,
+				6491AFD72ACCF7BF00F4D047 /* WeatherForecastService.swift in Sources */,
 				997BF5ED29D4838D0099F2B4 /* SceneDelegate.swift in Sources */,
 				99E9824929D7944B0084E9EB /* CurrentWeatherForecast.swift in Sources */,
 			);

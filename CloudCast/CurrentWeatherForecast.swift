@@ -8,6 +8,36 @@
 import Foundation
 import UIKit
 
+// Struct that conforms to Decodable for current weather
+struct WeatherAPIResponse: Decodable {
+  let currentWeather: CurrentWeatherForecast
+  
+  private enum CodingKeys: String, CodingKey {
+    case currentWeather = "current_weather"
+  }
+}
+
+// Struct to model current weather data
+struct CurrentWeatherForecast: Decodable {  // Conform to the Decodable protocol
+  let windSpeed: Double
+  let windDirection: Double
+  let temperature: Double
+  let weatherCodeRaw: Int
+  
+  // Transform weatherCodeRaw into WeatherCode type - if initializer fails (nil), default to clear sky
+  var weatherCode: WeatherCode {
+    return WeatherCode(rawValue: weatherCodeRaw) ?? .clearSky
+  }
+  
+  // Specifies which of the properties will map to the JSON response received
+  private enum CodingKeys: String, CodingKey {
+    case windSpeed = "windspeed"
+    case windDirection = "winddirection"
+    case temperature = "temperature"
+    case weatherCodeRaw = "weathercode"
+  }
+}
+
 // Based on https://open-meteo.com/en/docs
 enum WeatherCode: Int {
   case clearSky = 0

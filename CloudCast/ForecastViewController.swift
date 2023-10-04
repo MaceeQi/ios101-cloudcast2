@@ -59,6 +59,25 @@ class ForecastViewController: UIViewController {
     guard locationIndex < locations.count else { return }
     let location = locations[locationIndex]
     locationLabel.text = location.name
+    
+    // Initiate our networking request
+    WeatherForecastService.fetchForecast(latitude: location.latitude,
+                                         longitude: location.longitude) {
+      forecast in self.configure(with: forecast)
+    }
+  }
+  
+  
+  // Whenever location is changed, a request is fired and use data model created in response to update UI
+  private func configure(with forecast: CurrentWeatherForecast) {
+    forecastImageView.image = forecast.weatherCode.image
+    descriptionLabel.text = forecast.weatherCode.description
+    temperatureLabel.text = "\(forecast.temperature)"
+    windspeedLabel.text = "\(forecast.windSpeed) mph"
+    windDirectionLabel.text = "\(forecast.windDirection)°"
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "MMMM d, yyyy"
+    dateLabel.text = dateFormatter.string(from: Date())
   }
   
   
